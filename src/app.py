@@ -3,6 +3,7 @@ from spoiler_blocker import spoiler_blocker
 
 app = Flask(__name__)
 
+
 @app.route('/detect_spoiler', methods=['POST'])
 def detect_spoiler():
     data = request.json
@@ -11,5 +12,6 @@ def detect_spoiler():
     result = spoiler_blocker(text, spoiler_words)
     return jsonify({'spoiler_detected': result})
 
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(port=5001)
