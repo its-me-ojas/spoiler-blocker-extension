@@ -1,16 +1,48 @@
+<!-- extension/popup.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Spoiler Blocker</title>
-  <script src="popup.js"></script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoiler Blocker</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #282c34;
+      color: #61dafb;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #toggleButton {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #61dafb;
+      color: #282c34;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    #toggleButton:hover {
+      background-color: #43a5db;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Hello, Spoiler Blocker!</h1>
+  <h2>Spoiler Blocker</h2>
+  <button id="toggleButton">Toggle Extension</button>
   <p>made with &#9829; </p>
+  <script src="popup.js"></script>
 </body>
 
 </html>

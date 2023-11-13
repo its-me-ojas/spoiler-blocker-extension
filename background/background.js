@@ -12,19 +12,19 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         },
         body: JSON.stringify({ text: request.text, spoiler_words: request.spoiler_words }),
     })
-    .then(response => response.json())
-    .then(data => {
-        // Log the response from the Flask app
-        console.log("Response from Flask app:", data);
+        .then(response => response.json())
+        .then(data => {
+            // Log the response from the Flask app
+            console.log("Response from Flask app:", data);
 
-        // Send the response back to content.js
-        sendResponse(data);
-    })
-    .catch(error => {
-        // Log and handle errors
-        console.error('Error:', error);
-        sendResponse({ error: 'Error occurred during the request.' });
-    });
+            // Send the response back to content.js
+            sendResponse(data);
+        })
+        .catch(error => {
+            // Log and handle errors
+            console.error('Error:', error);
+            sendResponse({ error: 'Error occurred during the request.' });
+        });
 
     // Uncomment the return true if you want to keep the messaging channel open until the fetch is complete
     return true;
