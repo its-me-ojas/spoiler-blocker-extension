@@ -1,13 +1,32 @@
 {
   "manifest_version": 3,
-  "name": "Spoiler-Blocker",
+  "name": "Spoiler Blocker",
   "version": "1.0",
-  "description": "Block spoilers on web pages",
+  "description": "Block spoilers on web pages.",
   "permissions": [
     "activeTab"
   ],
   "action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  }
+    "default_icon": {
+      "16": "public/icon.png",
+      "48": "public/icon.png",
+      "128": "public/icon.png"
+    },
+    "default_popup": "src/popup.html"
+  },
+  "icons": {
+    "16": "public/icon.png",
+    "48": "public/icon.png",
+    "128": "public/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/content.js"
+      ]
+    }
+  ]
 }
