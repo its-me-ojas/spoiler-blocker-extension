@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Spoiler-Blocker",
+  "version": "1.0",
+  "description": "Block spoilers on web pages",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup,htm",
+  },
+  "icons": {
+    "48": "icon.png",
+  }
+}
